@@ -17,6 +17,9 @@
 		757939D024CF0EE500917D2F /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757939CE24CF0EE500917D2F /* RecordsViewController.swift */; };
 		757939D124CF0EE500917D2F /* RecordsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757939CF24CF0EE500917D2F /* RecordsViewController.xib */; };
 		757939D324CF101600917D2F /* PressureRecordsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757939D224CF101600917D2F /* PressureRecordsDataStore.swift */; };
+		757939D524CF226900917D2F /* SystemUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757939D424CF226900917D2F /* SystemUsage.swift */; };
+		757939D724CF2B4400917D2F /* MemPressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757939D624CF2B4300917D2F /* MemPressure.swift */; };
+		757939D924CF2B7100917D2F /* CPUPressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757939D824CF2B7100917D2F /* CPUPressure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		757939CE24CF0EE500917D2F /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		757939CF24CF0EE500917D2F /* RecordsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordsViewController.xib; sourceTree = "<group>"; };
 		757939D224CF101600917D2F /* PressureRecordsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressureRecordsDataStore.swift; sourceTree = "<group>"; };
+		757939D424CF226900917D2F /* SystemUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemUsage.swift; sourceTree = "<group>"; };
+		757939D624CF2B4300917D2F /* MemPressure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemPressure.swift; sourceTree = "<group>"; };
+		757939D824CF2B7100917D2F /* CPUPressure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUPressure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 				757939CE24CF0EE500917D2F /* RecordsViewController.swift */,
 				757939CF24CF0EE500917D2F /* RecordsViewController.xib */,
 				757939D224CF101600917D2F /* PressureRecordsDataStore.swift */,
+				757939D424CF226900917D2F /* SystemUsage.swift */,
+				757939D624CF2B4300917D2F /* MemPressure.swift */,
+				757939D824CF2B7100917D2F /* CPUPressure.swift */,
 				757939C024CF0DF900917D2F /* Main.storyboard */,
 				757939C324CF0DFB00917D2F /* Assets.xcassets */,
 				757939C524CF0DFB00917D2F /* LaunchScreen.storyboard */,
@@ -153,9 +162,12 @@
 			files = (
 				757939BF24CF0DF900917D2F /* MemoryPressureTestViewController.swift in Sources */,
 				757939D324CF101600917D2F /* PressureRecordsDataStore.swift in Sources */,
+				757939D724CF2B4400917D2F /* MemPressure.swift in Sources */,
 				757939BD24CF0DF900917D2F /* CPUPressureTestViewController.swift in Sources */,
 				757939B924CF0DF900917D2F /* AppDelegate.swift in Sources */,
 				757939BB24CF0DF900917D2F /* SceneDelegate.swift in Sources */,
+				757939D924CF2B7100917D2F /* CPUPressure.swift in Sources */,
+				757939D524CF226900917D2F /* SystemUsage.swift in Sources */,
 				757939D024CF0EE500917D2F /* RecordsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
