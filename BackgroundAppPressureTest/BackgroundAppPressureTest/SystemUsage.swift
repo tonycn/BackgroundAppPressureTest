@@ -9,28 +9,39 @@
 
 /*
  
- CPU usage func is from: https://stackoverflow.com/a/44134397/554084
+ CPU usage func is from:
+ - https://stackoverflow.com/a/44134397/554084
+ - https://github.com/beltex/SystemKit/blob/master/SystemKit/System.swift
+ 
  Memory usage func referenced from https://gist.github.com/algal/cd3b5dfc16c9d577846d96713f7fba40
  
  */
 
 import Foundation
 
+  fileprivate func hostBasicInfo() -> host_basic_info {
+      // TODO: Why is host_basic_info.max_mem val different from sysctl?
+      let HOST_BASIC_INFO_COUNT         : mach_msg_type_number_t =
+      UInt32(MemoryLayout<host_basic_info_data_t>.size / MemoryLayout<integer_t>.size)
+      var size     = HOST_BASIC_INFO_COUNT
+      let hostInfo = host_basic_info_t.allocate(capacity: 1)
+      
+      let result = hostInfo.withMemoryRebound(to: integer_t.self, capacity: Int(size)) {
+          host_info(mach_host_self(), HOST_BASIC_INFO, $0, &size)
+      }
+
+      let data = hostInfo.move()
+        hostInfo.deallocate()
+      return data
+  }
+
+var cpuCount:UInt32 = 0
 
 public func cpuProcessorCount() -> UInt32 {
-    // host_info params
-    var processorCount: UInt32 = 0
-
-    // Errors
-    var kr: kern_return_t
-
-    // Read the current ticks
-    kr = host_processor_info(mach_host_self(), PROCESSOR_CPU_LOAD_INFO, &processorCount, nil, nil)
-    if kr != KERN_SUCCESS {
-        return 0
-    } else {
-        return processorCount;
+    if cpuCount == 0 {
+        cpuCount = UInt32(hostBasicInfo().physical_cpu)
     }
+    return cpuCount
 }
 
 public func cpuUsage() -> Double {

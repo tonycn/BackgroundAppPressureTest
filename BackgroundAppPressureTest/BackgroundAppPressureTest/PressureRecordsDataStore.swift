@@ -17,7 +17,7 @@ class PressureRecordsDataStore {
         userDefaults = UserDefaults.init(suiteName: "test_records")!
     }
     
-    static var cpuStore: PressureRecordsDataStore?
+    static private var cpuStore: PressureRecordsDataStore?
     static public func cpuDataStore() -> PressureRecordsDataStore {
         if cpuStore == nil {
             cpuStore = PressureRecordsDataStore("cpu")
@@ -25,7 +25,7 @@ class PressureRecordsDataStore {
         return cpuStore!
     }
     
-    static var memoryStore: PressureRecordsDataStore?
+    static private var memoryStore: PressureRecordsDataStore?
     static public func memoryDataStore() -> PressureRecordsDataStore {
         if memoryStore == nil {
             memoryStore = PressureRecordsDataStore("memory")
