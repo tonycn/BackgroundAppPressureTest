@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		754B930224D0274A005FB225 /* BackgroundModelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B930124D0274A005FB225 /* BackgroundModelHelper.swift */; };
+		754B930224D0274A005FB225 /* BackgroundModeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B930124D0274A005FB225 /* BackgroundModeHelper.swift */; };
 		754B930424D05E89005FB225 /* testaudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 754B930324D05E89005FB225 /* testaudio.mp3 */; };
 		754B930624D069C0005FB225 /* ActionSheetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B930524D069C0005FB225 /* ActionSheetHelper.swift */; };
 		757939B924CF0DF900917D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757939B824CF0DF900917D2F /* AppDelegate.swift */; };
@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		754B930124D0274A005FB225 /* BackgroundModelHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModelHelper.swift; sourceTree = "<group>"; };
+		754B930124D0274A005FB225 /* BackgroundModeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModeHelper.swift; sourceTree = "<group>"; };
 		754B930324D05E89005FB225 /* testaudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = testaudio.mp3; sourceTree = "<group>"; };
 		754B930524D069C0005FB225 /* ActionSheetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetHelper.swift; sourceTree = "<group>"; };
 		757939B524CF0DF900917D2F /* BackgroundAppPressureTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundAppPressureTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +88,7 @@
 				757939D624CF2B4300917D2F /* MemPressure.swift */,
 				757939D824CF2B7100917D2F /* CPUPressure.swift */,
 				754B930524D069C0005FB225 /* ActionSheetHelper.swift */,
-				754B930124D0274A005FB225 /* BackgroundModelHelper.swift */,
+				754B930124D0274A005FB225 /* BackgroundModeHelper.swift */,
 				757939C024CF0DF900917D2F /* Main.storyboard */,
 				757939C324CF0DFB00917D2F /* Assets.xcassets */,
 				757939C524CF0DFB00917D2F /* LaunchScreen.storyboard */,
@@ -174,7 +174,7 @@
 				757939BF24CF0DF900917D2F /* MemoryPressureTestViewController.swift in Sources */,
 				757939D324CF101600917D2F /* PressureRecordsDataStore.swift in Sources */,
 				757939D724CF2B4400917D2F /* MemPressure.swift in Sources */,
-				754B930224D0274A005FB225 /* BackgroundModelHelper.swift in Sources */,
+				754B930224D0274A005FB225 /* BackgroundModeHelper.swift in Sources */,
 				757939BD24CF0DF900917D2F /* CPUPressureTestViewController.swift in Sources */,
 				757939B924CF0DF900917D2F /* AppDelegate.swift in Sources */,
 				757939BB24CF0DF900917D2F /* SceneDelegate.swift in Sources */,
