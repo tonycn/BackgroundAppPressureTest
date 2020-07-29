@@ -23,7 +23,7 @@ class MemoryPressureTestViewController: UIViewController, UITextFieldDelegate {
     
     private var memPressure: MemPressure?
     private var timer: Timer?
-    private var startTS: CFAbsoluteTime?
+    private var startTS: CFAbsoluteTime = CFAbsoluteTimeGetCurrent()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,11 @@ class MemoryPressureTestViewController: UIViewController, UITextFieldDelegate {
         testNameField.delegate = self
         let tap = UITapGestureRecognizer(target: self, action: #selector(CPUPressureTestViewController.tapAction(target:)))
         self.view.addGestureRecognizer(tap)
+        timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { (t) in
+            self.updateResultFields()
+        })
+        let total = ProcessInfo.processInfo.physicalMemory
+        totalMemoryField.text = "\(total/UInt64(MemPressure.MB))"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,8 +58,6 @@ class MemoryPressureTestViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func startAction(_ sender: Any) {
-        let total = ProcessInfo.processInfo.physicalMemory
-        totalMemoryField.text = "\(total/UInt64(MemPressure.MB))"
         
         if memPressure?.isRunning() ?? false {
             return
@@ -66,14 +69,9 @@ class MemoryPressureTestViewController: UIViewController, UITextFieldDelegate {
         memPressure?.stop()
         memPressure = MemPressure(allocUnit, memoryLeft, interval)
         memPressure?.start()
-        timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { (t) in
-            self.updateResultFields()
-        })
     }
     
     @IBAction func stopAction(_ sender: Any) {
-        timer?.invalidate()
-        timer = nil
         updateResultFields()
         memPressure?.stop()
         showActionSimpleConfirmSheet(controler: self) { (position) in
@@ -89,7 +87,7 @@ class MemoryPressureTestViewController: UIViewController, UITextFieldDelegate {
         if let memInfo = getVMStatistics64() {
             freeMemoryField.text = "\(memInfo.freeBytes/UInt64(MemPressure.MB))"
         }
-        timeField.text = "\(CFAbsoluteTimeGetCurrent()-self.startTS!)"
+        timeField.text = "\(CFAbsoluteTimeGetCurrent()-self.startTS)"
     }
 
     private func getValues() -> Dictionary<String, String> {

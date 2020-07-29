@@ -22,7 +22,7 @@ class CPUPressureTestViewController: UIViewController {
 
     private var cpuPressure: CPUPressure?
     private var timer: Timer?
-    private var startTS: CFAbsoluteTime?
+    private var startTS: CFAbsoluteTime = CFAbsoluteTimeGetCurrent()
 
     
     override func viewDidLoad() {
@@ -31,6 +31,11 @@ class CPUPressureTestViewController: UIViewController {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(CPUPressureTestViewController.tapAction(target:)))
         self.view.addGestureRecognizer(tap)
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { (t) in
+            self.updateResultFields()
+        })
+        cpuCoreNum.text = "\(cpuProcessorCount())"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,15 +62,9 @@ class CPUPressureTestViewController: UIViewController {
         cpuPressure?.stop()
         cpuPressure = CPUPressure(threadNum, idleTimeInterval)
         cpuPressure?.start()
-        cpuCoreNum.text = "\(cpuProcessorCount())"
-        timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true, block: { (t) in
-            self.updateResultFields()
-        })
     }
     
     @IBAction func stopAction(_ sender: Any) {
-        timer?.invalidate()
-        timer = nil
         updateResultFields()
         cpuPressure?.stop()
         showActionSimpleConfirmSheet(controler: self) { (position) in
@@ -79,7 +78,7 @@ class CPUPressureTestViewController: UIViewController {
     
     private func updateResultFields() {
         cpuLoad.text = "\(cpuUsage())"
-        time.text = "\(CFAbsoluteTimeGetCurrent()-self.startTS!)"
+        time.text = "\(Int(CFAbsoluteTimeGetCurrent()-self.startTS))"
     }
 
     private func getValues() -> Dictionary<String, String> {

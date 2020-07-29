@@ -325,13 +325,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E3BF9U2EB5;
+				DEVELOPMENT_TEAM = VXC8M934QX;
 				INFOPLIST_FILE = BackgroundAppPressureTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.wujianjun.BackgroundAppPressureTest;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.wujianjun.BackgroundAppPressureTestTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -343,13 +344,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E3BF9U2EB5;
+				DEVELOPMENT_TEAM = VXC8M934QX;
 				INFOPLIST_FILE = BackgroundAppPressureTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.wujianjun.BackgroundAppPressureTest;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.wujianjun.BackgroundAppPressureTestTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
