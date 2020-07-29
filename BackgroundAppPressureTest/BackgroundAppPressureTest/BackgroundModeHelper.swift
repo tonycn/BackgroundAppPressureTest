@@ -15,7 +15,7 @@ protocol BackgroundHelper {
     func disable()
 }
 
-class LocationBackgroundHelper : NSObject, CLLocationManagerDelegate, BackgroundHelper {    
+class LocationBackgroundHelper : NSObject, CLLocationManagerDelegate, BackgroundHelper {
     
     static let shared = LocationBackgroundHelper()
     let locationManager: CLLocationManager
@@ -31,7 +31,8 @@ class LocationBackgroundHelper : NSObject, CLLocationManagerDelegate, Background
     }
     
     public func enable() -> Bool {
-        if CLLocationManager.locationServicesEnabled() {
+        if CLLocationManager.locationServicesEnabled()
+            && (CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse) {
             locationManager.startUpdatingLocation()
             return true
         } else {
