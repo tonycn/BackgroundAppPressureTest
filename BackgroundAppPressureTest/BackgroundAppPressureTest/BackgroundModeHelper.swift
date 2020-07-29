@@ -48,7 +48,9 @@ class LocationBackgroundHelper : NSObject, CLLocationManagerDelegate, Background
     
     @objc
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
+        print("xxxxxxxxxxxxxxx")
+        print(locations)
+        print("***************")
     }
 }
 
