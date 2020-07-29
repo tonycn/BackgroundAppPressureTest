@@ -11,11 +11,11 @@ import CoreLocation
 import AVFoundation
 
 protocol BackgroundHelper {
-    func enable()
-    func disable() -> Bool
+    func enable() -> Bool
+    func disable()
 }
 
-class LocationBackgroundHelper : NSObject, CLLocationManagerDelegate, BackgroundHelper {
+class LocationBackgroundHelper : NSObject, CLLocationManagerDelegate, BackgroundHelper {    
     
     static let shared = LocationBackgroundHelper()
     let locationManager: CLLocationManager
