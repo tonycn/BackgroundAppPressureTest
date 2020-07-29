@@ -12,7 +12,7 @@ import AVFoundation
 
 protocol BackgroundHelper {
     func enable()
-    func disable()
+    func disable() -> Bool
 }
 
 class LocationBackgroundHelper : NSObject, CLLocationManagerDelegate, BackgroundHelper {
@@ -30,11 +30,13 @@ class LocationBackgroundHelper : NSObject, CLLocationManagerDelegate, Background
         locationManager.requestWhenInUseAuthorization()
     }
     
-    public func enable() {
+    public func enable() -> Bool {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
+            return true
         } else {
-            requestPermission();
+            requestPermission()
+            return false
         }
     }
 
@@ -67,14 +69,16 @@ class MusicBackgroundHelper : NSObject, CLLocationManagerDelegate {
         }
     }
         
-    public func enable() {
+    public func enable() -> Bool  {
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
         } catch {
             print(error)
+            return false
         }
         audioPlayer?.play()
+        return true
     }
 
     public func disable() {

@@ -18,6 +18,9 @@ class CPUPressureTestViewController: UIViewController {
     @IBOutlet var threadNumField: UITextField!
     @IBOutlet var idleTimeField: UITextField!
     @IBOutlet var backgroundModeSwitch: UISwitch!
+    @IBOutlet var locationBackgroundModeSwitch: UISwitch!
+
+    
     @IBOutlet var resultPositiveSwitch: UISwitch!
 
     private var cpuPressure: CPUPressure?
@@ -98,10 +101,23 @@ class CPUPressureTestViewController: UIViewController {
     
     @IBAction func backgroundSwitchAction(_ sender: Any) {
         if backgroundModeSwitch.isOn {
-            MusicBackgroundHelper.shared.enable()
+            if !MusicBackgroundHelper.shared.enable() {
+                backgroundModeSwitch.isOn = false
+            }
         } else {
             MusicBackgroundHelper.shared.disable()
         }
     }
+    
+    @IBAction func locationBackgroundSwitchAction(_ sender: Any) {
+        if locationBackgroundModeSwitch.isOn {
+            if !LocationBackgroundHelper.shared.enable() {
+                locationBackgroundModeSwitch.isOn = false
+            }
+        } else {
+            LocationBackgroundHelper.shared.disable()
+        }
+    }
+
 }
 

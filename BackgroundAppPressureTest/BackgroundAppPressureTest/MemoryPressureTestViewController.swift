@@ -15,6 +15,8 @@ class MemoryPressureTestViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var allocUnitField: UITextField!
     @IBOutlet var memoryLeftField: UITextField!
     @IBOutlet var backgroundModeSwitch: UISwitch!
+    @IBOutlet var locationBackgroundModeSwitch: UISwitch!
+    
     
     @IBOutlet var freeMemoryField: UITextField!
     @IBOutlet var totalMemoryField: UITextField!
@@ -112,9 +114,21 @@ class MemoryPressureTestViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func backgroundSwitchAction(_ sender: Any) {
         if backgroundModeSwitch.isOn {
-            MusicBackgroundHelper.shared.enable()
+            if !MusicBackgroundHelper.shared.enable() {
+                backgroundModeSwitch.isOn = false
+            }
         } else {
             MusicBackgroundHelper.shared.disable()
+        }
+    }
+    
+    @IBAction func locationBackgroundSwitchAction(_ sender: Any) {
+        if locationBackgroundModeSwitch.isOn {
+            if !LocationBackgroundHelper.shared.enable() {
+                locationBackgroundModeSwitch.isOn = false
+            }
+        } else {
+            LocationBackgroundHelper.shared.disable()
         }
     }
 }

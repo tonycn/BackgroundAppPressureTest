@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750C8E6624D1BEB500D352EF /* ActionSheetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B930524D069C0005FB225 /* ActionSheetHelper.swift */; };
+		750C8E6724D1BEB500D352EF /* MemoryPressureTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757939BE24CF0DF900917D2F /* MemoryPressureTestViewController.swift */; };
+		750C8E6824D1BEB500D352EF /* PressureRecordsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757939D224CF101600917D2F /* PressureRecordsDataStore.swift */; };
+		750C8E6924D1BEB500D352EF /* MemPressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757939D624CF2B4300917D2F /* MemPressure.swift */; };
+		750C8E6A24D1BEB500D352EF /* BackgroundModeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B930124D0274A005FB225 /* BackgroundModeHelper.swift */; };
+		750C8E6B24D1BEB500D352EF /* CPUPressureTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757939BC24CF0DF900917D2F /* CPUPressureTestViewController.swift */; };
+		750C8E6C24D1BEB500D352EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757939B824CF0DF900917D2F /* AppDelegate.swift */; };
+		750C8E6D24D1BEB500D352EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757939BA24CF0DF900917D2F /* SceneDelegate.swift */; };
+		750C8E6E24D1BEB500D352EF /* CPUPressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757939D824CF2B7100917D2F /* CPUPressure.swift */; };
+		750C8E6F24D1BEB500D352EF /* SystemUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757939D424CF226900917D2F /* SystemUsage.swift */; };
+		750C8E7024D1BEB500D352EF /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757939CE24CF0EE500917D2F /* RecordsViewController.swift */; };
+		750C8E7324D1BEB500D352EF /* testaudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 754B930324D05E89005FB225 /* testaudio.mp3 */; };
+		750C8E7424D1BEB500D352EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757939C524CF0DFB00917D2F /* LaunchScreen.storyboard */; };
+		750C8E7524D1BEB500D352EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757939C324CF0DFB00917D2F /* Assets.xcassets */; };
+		750C8E7624D1BEB500D352EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757939C024CF0DF900917D2F /* Main.storyboard */; };
+		750C8E7724D1BEB500D352EF /* RecordsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757939CF24CF0EE500917D2F /* RecordsViewController.xib */; };
 		754B930224D0274A005FB225 /* BackgroundModeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B930124D0274A005FB225 /* BackgroundModeHelper.swift */; };
 		754B930424D05E89005FB225 /* testaudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 754B930324D05E89005FB225 /* testaudio.mp3 */; };
 		754B930624D069C0005FB225 /* ActionSheetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B930524D069C0005FB225 /* ActionSheetHelper.swift */; };
@@ -26,10 +42,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		750C8E7B24D1BEB500D352EF /* PressureTool2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PressureTool2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		750C8E7C24D1BEB500D352EF /* BackgroundAppPressureTest copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BackgroundAppPressureTest copy-Info.plist"; path = "/Users/jianjun/opensource_workspace/iOS/BackgroundAppPressureTest/BackgroundAppPressureTest/BackgroundAppPressureTest copy-Info.plist"; sourceTree = "<absolute>"; };
 		754B930124D0274A005FB225 /* BackgroundModeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundModeHelper.swift; sourceTree = "<group>"; };
 		754B930324D05E89005FB225 /* testaudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = testaudio.mp3; sourceTree = "<group>"; };
 		754B930524D069C0005FB225 /* ActionSheetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetHelper.swift; sourceTree = "<group>"; };
-		757939B524CF0DF900917D2F /* BackgroundAppPressureTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundAppPressureTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		757939B524CF0DF900917D2F /* PressureTool1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PressureTool1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		757939B824CF0DF900917D2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		757939BA24CF0DF900917D2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		757939BC24CF0DF900917D2F /* CPUPressureTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUPressureTestViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +65,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		750C8E7124D1BEB500D352EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		757939B224CF0DF900917D2F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,13 +87,15 @@
 			children = (
 				757939B724CF0DF900917D2F /* BackgroundAppPressureTest */,
 				757939B624CF0DF900917D2F /* Products */,
+				750C8E7C24D1BEB500D352EF /* BackgroundAppPressureTest copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		757939B624CF0DF900917D2F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				757939B524CF0DF900917D2F /* BackgroundAppPressureTest.app */,
+				757939B524CF0DF900917D2F /* PressureTool1.app */,
+				750C8E7B24D1BEB500D352EF /* PressureTool2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,9 +127,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		757939B424CF0DF900917D2F /* BackgroundAppPressureTest */ = {
+		750C8E6424D1BEB500D352EF /* PressureTool2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 757939CB24CF0DFB00917D2F /* Build configuration list for PBXNativeTarget "BackgroundAppPressureTest" */;
+			buildConfigurationList = 750C8E7824D1BEB500D352EF /* Build configuration list for PBXNativeTarget "PressureTool2" */;
+			buildPhases = (
+				750C8E6524D1BEB500D352EF /* Sources */,
+				750C8E7124D1BEB500D352EF /* Frameworks */,
+				750C8E7224D1BEB500D352EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PressureTool2;
+			productName = BackgroundAppPressureTest;
+			productReference = 750C8E7B24D1BEB500D352EF /* PressureTool2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		757939B424CF0DF900917D2F /* PressureTool1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 757939CB24CF0DFB00917D2F /* Build configuration list for PBXNativeTarget "PressureTool1" */;
 			buildPhases = (
 				757939B124CF0DF900917D2F /* Sources */,
 				757939B224CF0DF900917D2F /* Frameworks */,
@@ -112,9 +156,9 @@
 			);
 			dependencies = (
 			);
-			name = BackgroundAppPressureTest;
+			name = PressureTool1;
 			productName = BackgroundAppPressureTest;
-			productReference = 757939B524CF0DF900917D2F /* BackgroundAppPressureTest.app */;
+			productReference = 757939B524CF0DF900917D2F /* PressureTool1.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -145,12 +189,25 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				757939B424CF0DF900917D2F /* BackgroundAppPressureTest */,
+				757939B424CF0DF900917D2F /* PressureTool1 */,
+				750C8E6424D1BEB500D352EF /* PressureTool2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		750C8E7224D1BEB500D352EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				750C8E7324D1BEB500D352EF /* testaudio.mp3 in Resources */,
+				750C8E7424D1BEB500D352EF /* LaunchScreen.storyboard in Resources */,
+				750C8E7524D1BEB500D352EF /* Assets.xcassets in Resources */,
+				750C8E7624D1BEB500D352EF /* Main.storyboard in Resources */,
+				750C8E7724D1BEB500D352EF /* RecordsViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		757939B324CF0DF900917D2F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -166,6 +223,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		750C8E6524D1BEB500D352EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				750C8E6624D1BEB500D352EF /* ActionSheetHelper.swift in Sources */,
+				750C8E6724D1BEB500D352EF /* MemoryPressureTestViewController.swift in Sources */,
+				750C8E6824D1BEB500D352EF /* PressureRecordsDataStore.swift in Sources */,
+				750C8E6924D1BEB500D352EF /* MemPressure.swift in Sources */,
+				750C8E6A24D1BEB500D352EF /* BackgroundModeHelper.swift in Sources */,
+				750C8E6B24D1BEB500D352EF /* CPUPressureTestViewController.swift in Sources */,
+				750C8E6C24D1BEB500D352EF /* AppDelegate.swift in Sources */,
+				750C8E6D24D1BEB500D352EF /* SceneDelegate.swift in Sources */,
+				750C8E6E24D1BEB500D352EF /* CPUPressure.swift in Sources */,
+				750C8E6F24D1BEB500D352EF /* SystemUsage.swift in Sources */,
+				750C8E7024D1BEB500D352EF /* RecordsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		757939B124CF0DF900917D2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -206,6 +281,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		750C8E7924D1BEB500D352EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VXC8M934QX;
+				INFOPLIST_FILE = "BackgroundAppPressureTest copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.wujianjun.BackgroundAppPressureTestTool2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		750C8E7A24D1BEB500D352EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VXC8M934QX;
+				INFOPLIST_FILE = "BackgroundAppPressureTest copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.wujianjun.BackgroundAppPressureTestTool2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		757939C924CF0DFB00917D2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -361,6 +474,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		750C8E7824D1BEB500D352EF /* Build configuration list for PBXNativeTarget "PressureTool2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				750C8E7924D1BEB500D352EF /* Debug */,
+				750C8E7A24D1BEB500D352EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		757939B024CF0DF900917D2F /* Build configuration list for PBXProject "BackgroundAppPressureTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -370,7 +492,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		757939CB24CF0DFB00917D2F /* Build configuration list for PBXNativeTarget "BackgroundAppPressureTest" */ = {
+		757939CB24CF0DFB00917D2F /* Build configuration list for PBXNativeTarget "PressureTool1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				757939CC24CF0DFB00917D2F /* Debug */,
