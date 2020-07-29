@@ -34,6 +34,7 @@ class LocationBackgroundHelper : NSObject, CLLocationManagerDelegate, Background
         if CLLocationManager.locationServicesEnabled()
             && (CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse) {
             locationManager.startUpdatingLocation()
+            locationManager.allowsBackgroundLocationUpdates = true
             return true
         } else {
             requestPermission()
