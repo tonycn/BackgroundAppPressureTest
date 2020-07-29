@@ -75,7 +75,7 @@ class MusicBackgroundHelper : NSObject, CLLocationManagerDelegate {
         
     public func enable() -> Bool  {
         do {
-            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setCategory(.playback, options: .mixWithOthers)
             try AVAudioSession.sharedInstance().setActive(true)
         } catch {
             print(error)
